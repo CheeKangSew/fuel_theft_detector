@@ -5,8 +5,9 @@ from sklearn.ensemble import IsolationForest
 import openai
 import matplotlib.pyplot as plt
 
-# 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+
+# openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 def prepare_features(df):
     df['TransactionDateTime'] = pd.to_datetime(df['TransactionDate'] + ' ' + df['TransactionTime'], errors='coerce', dayfirst=True)
