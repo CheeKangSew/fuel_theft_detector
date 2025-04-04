@@ -7,7 +7,7 @@ import openai
 import matplotlib.pyplot as plt
 
 
-openai.api_key = st.secrets.get("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY"))
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 if not openai.api_key:
     st.error("⚠️ OpenAI API key is missing! Please set it in Streamlit secrets.")
