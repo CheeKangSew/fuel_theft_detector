@@ -1,7 +1,8 @@
-pip==25.0.1
-streamlit==1.22.0
+streamlit
 pandas
-sklearn
 openai
+scikit-learn
 matplotlib
 python-dotenv
+pip>=25.0.1  # Upgrade pip during installation
+
